@@ -1,0 +1,61 @@
+
+@keyframes slider {
+
+                        /* Indica o tempo que a primeira imagem ficará estática entre 0% à 20% */
+ 0% {
+  left: 0;
+ }
+
+ 20% {
+  left: 0;
+ }
+
+                         /* Indica á transição entre a primeira e segunda imagem entre 20% á 40% */
+ 35% {
+  left: -100%;
+ }
+
+        /* Indica á transição entre a primeira e segunda imagem entre 20% á 40% */
+
+ 50% {
+  left: -100%;
+ } 
+
+
+ 65%{
+  left: -200%;
+ }
+
+ 80%{
+  left: -200%;
+ }
+
+
+}
+
+
+#slider {
+  position: relative;
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left:0;
+  width: 300%;
+  animation: 20s slider infinite; 
+}
+
+#slider > figure{
+  position: relative;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+}
+
+
+figure, 
+figure img{
+  width: 100%;
+  height: 100vh;
+}

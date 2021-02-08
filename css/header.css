@@ -1,0 +1,349 @@
+
+
+/* 
+/* . Header 
+/* =================================================================== */
+
+header {
+   position: fixed;
+	 background: #12151B;
+	 background: rgba(18, 21, 27, 1);
+   background: #353b48;
+   z-index: 1;
+}
+
+.col-header .logo{
+   padding: .5rem;
+   color: #2ecc71;
+}
+.col-header .logo h1{
+	 font-size: 2.5rem;
+	 font-weight: 700;
+}
+
+ 
+
+ /* 
+/* . Nav Menu
+/* =================================================================== */
+
+
+ .menu{
+ 	  font: 1em "raleway-heavy", sans-serif;
+    letter-spacing: 1.5px;
+  }
+ 
+ ul#nav li a{
+	 display: inline-block;
+	 padding: 1.8rem 1rem;
+	 line-height: 1rem;
+	 color: #c0cdd1;
+}
+
+ul#nav li a:hover{
+   color: white;
+   background-color: rgba(37,163,90,.8);
+
+}
+
+ul#nav li a:active {
+   background-color: transparent !important;
+}
+
+ul#nav li.current a {
+  background-color: rgba(37,163,90,1);
+  color: white;
+}
+
+ul#nav li.current a:hover{
+  background-color: rgba(37,163,90,.8);
+  color: white;
+}
+
+
+ 
+.hide-menu-btn,
+.show-menu-btn{
+   position: absolute;
+   top: -.5rem;
+   transition: 1s;
+   font-size: 3em;
+   cursor: pointer;
+   display: none;
+   color: #2ecc71;
+   
+}
+
+.hide-menu-btn:hover,
+.show-menu-btn:hover{
+   color: gray;
+   transition: 1s;    
+}
+
+#chk{
+  display: none;
+}
+
+
+ /* 
+/* . Butão Tema Dark
+/* =================================================================== */
+
+.btn-theme-dark{
+  position: absolute;
+  right: 3rem;
+  top: 1.3rem;
+}
+
+
+.label-theme-dark{
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(195,195,195);
+  width: 80px;
+  border-radius: 50px;
+  border: solid 1px black;
+  padding: 5px 6px;
+  cursor: pointer;
+}
+
+i{
+  font-size: 1.5em;
+}
+
+.fa-sun,
+.fa-moon{
+  color: #2c3e50;
+}
+
+
+
+.ball{
+  position: absolute;
+  background-color: #2ecc71;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  top: .2rem;
+  transition: .5s;
+  box-shadow: .5px .5px 10px black;
+  transform: translateX(0px);
+}
+
+#chk-theme{
+   display: none;
+   border: solid 2px red;
+   position: absolute;
+   top: 5rem;
+}
+
+.chk-theme:checked + label .ball{
+  transform: translateX(38px);
+}
+
+.chk-theme:checked + label{
+  background-color: #2ecc71;
+}
+
+html[theme]{
+   background-color: #2d2d2d;
+}
+
+
+html[theme] h2,
+html[theme] p{
+  color: white;
+}
+
+html[theme] hr{
+   background-color: gray;
+}
+
+@media (max-width: 1280px){
+
+  .label-theme-dark{
+     transform: scale(.8);
+  }
+
+  .btn-theme-dark{
+      right: 1.5rem;
+   }
+
+}
+
+
+@media (max-width: 992px){
+ 
+  .menu{
+    font: .8em "raleway-heavy", sans-serif;
+    letter-spacing: 1.5px;
+    margin-left: 1rem; 
+  }
+
+  .col-header .logo h1{
+    font-size: 2.3rem;
+  }
+
+  ul#nav li a{
+  padding: 1.7rem 1rem;
+
+ }
+
+ .label-theme-dark{
+     transform: scale(.9);
+  }
+
+  .btn-theme-dark{
+  right: 2rem;
+  top: 1.1rem;
+  }
+}
+
+@media (max-width: 768px){
+ .show-menu-btn{
+  position: absolute;
+  top: 1.3rem;   
+  right: 2rem;
+  color: #2ecc71;
+  height: 4vh;
+  z-index: 3;
+
+ } 
+
+ .show-menu-btn i{
+    position: relative;
+    top: -1.2rem;
+    cursor: pointer;
+    transition: 1s;
+    z-index: 2;
+}
+
+.nav{
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      background: rgba(18, 21, 27, 1);
+      right: -100%;
+      top:0;
+      text-align: center;
+      padding-top: 3.8rem;
+      line-height: normal;
+      transition:  0.7s;
+      z-index: 4;
+
+   }
+
+   .nav a{
+      position: relative;
+      display: block;
+      padding: 35px;
+      top: 2rem;
+    }
+
+     ul#nav li a {
+       padding: 1.2rem;
+       transition: 1s;
+       font-size: 1rem;
+    }
+
+    ul#nav li a:hover{
+      font-size: 1.3rem;
+      transition: 1s;
+    }
+
+    ul#nav li a:hover,
+    ul#nav li.current a:hover{
+     color: rgba(37,163,90,.8);
+     background-color: transparent;
+   }
+
+    ul#nav li.current a{
+        background-color: transparent;
+    }
+
+    .hide-menu-btn,
+    .show-menu-btn{
+       display: block;
+    } 
+
+    .hide-menu-btn{
+      right: 1.8rem;
+      top: .8rem; 
+    
+    }
+
+     #chk:checked ~ .nav{
+      right: 0;
+    }
+
+    .btn-theme-dark{
+      left: 1rem;
+      top: 1.1rem;
+    }
+    
+    @media (max-width: 576px){
+      .col-header .logo h1{
+          font-size: 2rem;
+       }
+
+       .label-theme-dark{
+           transform: scale(.8);
+       }
+
+       .btn-theme-dark{
+           left: .5rem;
+           top: .9rem;
+       }
+
+       .show-menu-btn i{
+          line-height: 1.6;
+        }
+
+        .hide-menu-btn,
+        .show-menu-btn{
+            font-size: 2.7em;
+         } 
+  }
+      
+    @media (max-width: 420px){
+      .btn-theme-dark{
+          left: .5rem;
+        }
+      
+      .show-menu-btn i{
+          line-height: 1.6;
+        }
+
+      .hide-menu-btn,
+      .show-menu-btn{
+         font-size: 2.5em;
+       } 
+       
+         }
+
+       @media (max-width: 370px){
+
+        .col-header .logo h1{
+          font-size: 1.6rem;
+       }
+
+          .label-theme-dark{
+           transform: scale(.7);
+       }
+
+       .btn-theme-dark{
+          left: .5rem;
+           top: .5rem;
+       }
+
+       .btn-theme-dark{
+           top: .6rem;
+       }
+
+       .hide-menu-btn,
+       .show-menu-btn{
+            font-size: 2.3em;
+        } 
+}    

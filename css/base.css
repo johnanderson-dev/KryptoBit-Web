@@ -1,0 +1,13 @@
+#slider,
+.pages{
+	 height: 100vh;
+     
+}
+
+.pages{
+	padding: 2rem;
+}
+
+h2, p{
+	text-align: center;
+}
